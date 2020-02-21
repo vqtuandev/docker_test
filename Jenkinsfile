@@ -5,5 +5,5 @@ node('master') {
     stage 'Build'
         sh "docker build -t simple_nodejs ."
     stage 'Pusblish UT Reports'
-        sh "docker-compose up -d"
+        sh "docker-compose -f docker-compose.yml up -d"
 }
